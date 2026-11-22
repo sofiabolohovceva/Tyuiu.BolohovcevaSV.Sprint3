@@ -1,0 +1,26 @@
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Tyuiu.BolohovcevaSV.Sprint3.Task5.V17.Lib;
+
+namespace Tyuiu.BolohovcevaSV.Sprint3.Task5.V17.Test
+{
+    [TestClass]
+    public sealed class DataServiceTest
+    {
+        [TestMethod]
+        public void ChechGetSumSumSeries()
+        {
+            DataService ds = new DataService();
+
+            int x = 2;
+            int startValue1 = 1;
+            int stopValue1 = 3;
+            int startValue2 = 1;
+            int stopValue2 = 12;
+
+            double res = ds.GetSumSumSeries(x, startValue1, startValue2, stopValue1, stopValue2);
+
+            double wait = 143.624;
+            Assert.AreEqual(wait, res);
+        }
+    }
+}
